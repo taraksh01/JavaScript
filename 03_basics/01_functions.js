@@ -7,5 +7,11 @@ function greetings(username = "new user") {
   return `Welcome ${username}`;
 }
 
-console.log(greetings());
-console.log(greetings("tarak"));
+// console.log(greetings());
+// console.log(greetings("tarak"));
+
+function calculateCartPrice(...nums) {
+  return nums;
+}
+
+console.log(calculateCartPrice(10, 219.2, 278, 218));
