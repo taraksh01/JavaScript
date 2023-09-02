@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #212121;
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="languages">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(language) {
+      const li = document.createElement("li");
+      li.innerHTML = language;
+      document.querySelector(".languages").appendChild(li);
+    }
+    addLanguage("Python");
+    addLanguage("typescript");
+
+    function addOptimizedLanguage(language) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(language));
+      document.querySelector(".languages").appendChild(li);
+      console.log(li);
+    }
+    addOptimizedLanguage("html");
+
+    // Edit
+    const secondChild = document.querySelector("li:nth-child(2)");
+    const newLi = document.createElement("li");
+    newLi.textContent = "MOJO";
+    secondChild.replaceWith(newLi);
+
+    const firstChild = document.querySelector("li:first-child");
+    firstChild.outerHTML = `<li>typescript</li>`;
+
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+  </script>
+</html>
