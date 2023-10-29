@@ -5,12 +5,12 @@ const skills = ["html", "css", "js", "react", "github", "git"];
 
 const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const myNewNumbers = myNumbers.filter((num) => num > 5);
-console.log(myNewNumbers);
+// console.log(myNewNumbers);
 
 // Filter using forEach
 // const filteredNumbers = [];
 // myNumbers.forEach((num) => {
-//   if (num > 5) {
+//   if (num > 7) {
 //     filteredNumbers.push(num);
 //   }
 // });
@@ -35,7 +35,7 @@ const userBooks = books.filter(
 
 // console.log(userBooks);
 
-// const addTen = myNumbers.map((number) => number * 10);
+// const addTen = myNumbers.map((number) => number + 10);
 // console.log(addTen);
 const chainedValue = myNumbers
   .map((number) => number * 10)
@@ -44,10 +44,10 @@ const chainedValue = myNumbers
 // console.log(chainedValue);
 
 const sumWithInitial = myNumbers.reduce((sum, number) => {
-  console.log(`${sum} ${number}`);
+  // console.log(`${sum} ${number}`);
   return sum + number;
-}, 10);
-console.log(sumWithInitial);
+}, 0);
+// console.log(sumWithInitial);
 
 const shoppingCart = [
   {
