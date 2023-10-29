@@ -14,9 +14,9 @@ const greetings = "Hello, Tarak!";
 //   console.log(greet);
 // }
 
-for (const greet in greetings) {
-  console.log(greetings[greet]);
-}
+// for (const greet in greetings) {
+//   console.log(greetings[greet]);
+// }
 
 const map = new Map(); // map is not iterable
 // map.set("name", "Tarak");
@@ -30,6 +30,10 @@ map.set("name", "rocket");
 // for (const [key, value] of map) {
 //   console.log(key, value);
 // }
+
+for (const [key, value] in map) {
+  console.log(key, value);
+}
 
 const myObject = { name: "Tarak", age: 25, status: "single", disabled: false };
 // for (const key in myObject) {
