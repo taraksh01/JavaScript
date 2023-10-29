@@ -31,9 +31,9 @@ map.set("name", "rocket");
 //   console.log(key, value);
 // }
 
-for (const [key, value] in map) {
-  console.log(key, value);
-}
+// for (const [key, value] in map) {
+//   console.log(key, value);
+// }
 
 const myObject = { name: "Tarak", age: 25, status: "single", disabled: false };
 // for (const key in myObject) {
@@ -43,3 +43,6 @@ const myObject = { name: "Tarak", age: 25, status: "single", disabled: false };
 const arr2 = ["json", "js", "python", "ruby", "java"];
 
 // arr2.forEach((item) => console.log(item));
+map.forEach((element) => {
+  console.log(element);
+});
