@@ -14,6 +14,10 @@ const greetings = "Hello, Tarak!";
 //   console.log(greet);
 // }
 
+for (const greet in greetings) {
+  console.log(greetings[greet]);
+}
+
 const map = new Map(); // map is not iterable
 // map.set("name", "Tarak");
 map.set("age", 25);
@@ -34,5 +38,4 @@ const myObject = { name: "Tarak", age: 25, status: "single", disabled: false };
 
 const arr2 = ["json", "js", "python", "ruby", "java"];
 
-arr2.forEach((item) => console.log(item));
-
+// arr2.forEach((item) => console.log(item));
