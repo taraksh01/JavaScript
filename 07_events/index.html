@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body style="background-color: #212121; color: gainsboro">
+    <h1>Click the buttons</h1>
+    <div
+      class="button-container"
+      style="padding: 20px; border: 1px solid white; background-color: gray"
+    >
+      <button class="button" id="one">One</button>
+      <button class="button" id="two">Two</button>
+      <button class="button" id="three">Three</button>
+      <button class="button" id="four">Four</button>
+      <button class="button" id="five">Five</button>
+    </div>
+  </body>
+  <script>
+    document
+      .querySelector(".button-container")
+      .addEventListener("click", () => {
+        console.log("button container clicked");
+      });
+    document.querySelectorAll(".button").forEach((button) => {
+      button.addEventListener(
+        "click",
+        (e) => {
+          console.log(button.id);
+          e.stopPropagation();
+        },
+        false
+      );
+    });
+
+    // The third parameter in event listener takes a boolean value that represents whether the event will be propagated or captured. If it is true, the event will be capture and If it is false, the event will propagate.
+  </script>
+</html>
