@@ -8,6 +8,8 @@
   <body>
     <h1>SetTimeOut and SetInterval</h1>
     <button id="clear-timeout">clear timeout</button>
+    <button id="start-interval">start interval</button>
+    <button id="stop-interval">stop interval</button>
   </body>
   <script>
     const timeout = setTimeout(() => {
@@ -17,6 +19,24 @@
     document.querySelector("#clear-timeout").addEventListener("click", () => {
       console.log("timeout cleared");
       clearTimeout(timeout);
+    });
+
+    let interval;
+
+    document.querySelector("#start-interval").addEventListener("click", () => {
+      if (!interval) {
+        interval = setInterval(() => {
+          console.log(`interval started at ${Date().toLocaleString()}`);
+        }, 1000);
+      }
+    });
+
+    document.querySelector("#stop-interval").addEventListener("click", () => {
+      if (interval) {
+        clearInterval(interval);
+        console.log("interval stoped");
+        interval = null;
+      }
     });
   </script>
 </html>
