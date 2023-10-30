@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetTimeOut and SetInterval</title>
+  </head>
+  <body>
+    <h1>SetTimeOut and SetInterval</h1>
+    <button id="clear-timeout">clear timeout</button>
+  </body>
+  <script>
+    const timeout = setTimeout(() => {
+      console.log("setTimeout() called");
+    }, 1000);
+
+    document.querySelector("#clear-timeout").addEventListener("click", () => {
+      console.log("timeout cleared");
+      clearTimeout(timeout);
+    });
+  </script>
+</html>
