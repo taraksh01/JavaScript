@@ -8,7 +8,7 @@ const user = {
   },
 };
 
-console.log(user.getUsserDetails());
+// console.log(user.getUsserDetails());
 
 // Constructor function
 const User = function (username, loggedIn, lastLoggedIn) {
@@ -24,5 +24,28 @@ const User = function (username, loggedIn, lastLoggedIn) {
 
 const userOne = new User("userOne", false, "2-minutes ago");
 const userTwo = new User("userTwo", true, "20-minutes ago");
-console.log(userOne);
-console.log(userTwo);
+// console.log(userOne);
+// console.log(userTwo);
+
+const someFunction = function () {
+  return "someFunction";
+};
+
+someFunction.something = "something";
+
+console.log(someFunction());
+console.log(someFunction.something);
+console.log(someFunction.prototype);
+
+someFunction.prototype.print = function () {
+  return "someFunction print method called";
+};
+
+const otherFunction = new someFunction();
+
+console.log(otherFunction.print());
+
+// Why new keyword?
+
+// - A new Object is created.
+// - The newly created object is linked to the prototype property of constructor function.
